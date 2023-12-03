@@ -12,7 +12,7 @@
             </template>
 
             <template v-slot:item.answer_options="props" >
-                <div v-if="props.item.answer_options.length > 0" >
+                <div v-if="props.item.answer_options?.length > 0" >
                     <div v-for="(option, i) in props.item.answer_options" :key="i">{{ option }}</div>
                 </div>
                 <div v-else>

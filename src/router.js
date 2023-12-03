@@ -17,9 +17,29 @@ const routes = [
             component: () => import('./views/GenerateQuestions.vue'),
         },
         {
+            path: 'new-questions',
+            name: 'NewQuestionsList',
+            component: () => import('./views/NewQuestionsList.vue'),
+        },
+        {
             path: 'grade-papers',
             name: 'GradePapers',
             component: () => import('./views/GradePapers.vue'),
+        },
+        {
+            path: 'marking-scheme',
+            name: 'ProcessedMarkingScheme',
+            component: () => import('./views/ProcessedMarkingScheme.vue'),
+        },
+        {
+            path: 'upload-student-answers',
+            name: 'UploadStudentAnswers',
+            component: () => import('./views/UploadStudentAnswers.vue'),
+        },
+        {
+            path: 'graded-answers',
+            name: 'GradedAnswers',
+            component: () => import('./views/GradedAnswers.vue'),
         },
     ]
   },  

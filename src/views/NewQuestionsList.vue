@@ -1,4 +1,16 @@
 <template>
+<div v-if="showAnswers" class="d-flex justify-center mb-10">
+    <v-btn color="secondary" @click="clearStorage">Generate new questions</v-btn>
+</div>
+
+<SuccessModal 
+    v-if="showAnswers"
+    title="Questions generated!"
+    type="success"
+    icon="check-circle"
+    closeButtonText="OK"
+/>
+
 <v-container>
     <v-tabs
         v-model="tab"
@@ -37,6 +49,7 @@ import QuestionsTable from '@/components/questions/Table.vue'
 import QuestionsFlashcards from '@/components/questions/Cards.vue'
 import QuestionsSheet from '@/components/questions/QuestionsSheet.vue'
 import AnswerSheet from '@/components/questions/AnswerSheet.vue'
+import SuccessModal from '@/components/global/SuccessModal.vue';
 
 export default {
     name: 'QuestionsList',
@@ -46,8 +59,9 @@ export default {
         QuestionsFlashcards,
         QuestionsSheet,
         AnswerSheet,
+        SuccessModal,
     },
- 
+    
     data() {
         return {
             tab: 1,
@@ -104,11 +118,6 @@ export default {
     mounted() {
         this.generatedQuestions = JSON.parse(localStorage.getItem('evaluai_generatedQuestions')).questions
         this.inputs = JSON.parse(localStorage.getItem('evaluai_inputs'))
-        
-        window.addEventListener('evaluai_localstorage_changed', (event) => {
-            this.generatedQuestions = JSON.parse(event.detail.generatedQuestions).questions
-            this.inputs = JSON.parse(event.detail.inputs)
-        });
     }
 }
 </script>
