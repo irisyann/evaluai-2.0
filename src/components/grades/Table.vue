@@ -21,7 +21,7 @@
                         <canvas id="performanceByQuestionsChart"></canvas>
                     </v-card-text>
                 </v-card>
-                <v-card style="background-color: transparent">
+                <v-card width="40%" style="background-color: transparent">
                     <v-card-title>Grades performance</v-card-title>
                     <v-card-text>
                         <canvas id="gradesPerformanceChart"></canvas>

@@ -38,11 +38,6 @@ export default {
     data: () => ({
         navList: [
             {
-                icon: 'mdi-home',
-                title: 'Home',
-                value: '/home'
-            },
-            {
                 icon: 'mdi-file-plus',
                 title: 'Generate Questions',
                 value: '/generate-questions'
@@ -56,6 +51,11 @@ export default {
                 icon: 'mdi-file-check',
                 title: 'Grade Papers',
                 value: '/upload-student-answers'
+            },
+            {
+                icon: 'mdi-chart-bar',
+                title: 'Analysis',
+                value: '/graded-answers'
             },
         ]
     }),
