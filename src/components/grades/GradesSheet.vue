@@ -2,7 +2,7 @@
     <v-container>
         <v-card v-for="(student, j) in generatedGrades" :key="j" color="accent" class="py-5 mx-auto mb-5">
             <v-card-text class="mx-auto d-flex">
-                <v-sheet color="primary" class="rounded pa-5 d-flex flex-column justify-center mr-3">
+                <v-sheet class="rounded pa-5 d-flex flex-column justify-center mr-3">
                     <div class="mb-2">
                         Name: <div class="font-weight-bold">{{ student.student_name }}</div>
                     </div>

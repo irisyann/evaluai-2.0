@@ -124,50 +124,15 @@
         data() {
             return {
                 educationLevel: 'Undergraduate',
-                topic: 'History',
-                numQuestions: 3,
+                topic: 'Mathematics',
+                numQuestions: 8,
                 questionType: ['Exam'],
                 totalScore: 100,
                 difficulty: 2,
                 taxonomyLevel: ['Understand', 'Apply', 'Analyse'],
                 questionStyle: ['Objective', 'Subjective', 'Essay'],
                 fileSources: null,
-                textSource: `Course Description:
-This course provides an overview of Malaysian history, focusing on the major political, social, cultural, and economic developments that have shaped the nation. Students will explore the pre-colonial, colonial, and post-independence eras, examining key events, figures, and issues that have defined Malaysia's history. The course will also discuss the diverse cultures and ethnicities that make up the Malaysian population.
-
-Course Schedule:
-
-Introduction to Malaysian History
-Understanding the geographic and cultural diversity of Malaysia.
-Overview of pre-colonial Malay states.
-Early trade and cultural exchanges.
-
-Colonial Period
-The arrival of Portuguese, Dutch, and British.
-Impact of colonization on Malaysian society.
-Rise of nationalism and the struggle for independence.
-
-Road to Independence
-Post-World War II developments.
-The role of key figures, including Tunku Abdul Rahman.
-Achieving independence in 1957.
-
-Formation of Malaysia
-The formation of Malaysia in 1963.
-Singapore's separation.
-Confrontation with Indonesia.
-
-Malaysia in the Modern Era
-Economic development and industrialization.
-Cultural diversity and social challenges.
-The role of Malaysia in Southeast Asia and the global context.
-
-Contemporary Issues
-Discussing contemporary issues and challenges facing Malaysia.
-Examining the role of multiculturalism and national identity.
-Malaysia's path into the future.
-In-class presentations and discussions.
-                `,
+                textSource: `Integration and differentiation`,
                 loadingGenerate: false,
                 rules: {
                     required: value => !!value || 'Required.',
