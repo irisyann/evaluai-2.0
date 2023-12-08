@@ -4,7 +4,9 @@
 
         <v-card-text class="py-5">
             <div class="mb-6">
-                <p class="pa-2 mb-2 font-weight-bold" style="background-color:  #48505B; border-radius: 5px;">Upload marking scheme</p>
+                <p class="pa-2 mb-2 font-weight-bold" style="background-color:  #48505B; border-radius: 5px;">
+                    <v-icon start>mdi-numeric-1-circle</v-icon>
+                    Step 1: Upload marking scheme</p>
                 <p class="font-italic ml-5">Course structure, class notes, etc</p>
                 <v-file-input v-model="markingSchemefileSources" accept=".pdf" chips multiple color="primary" class="my-3 ml-5" style="width: 95%">
                     <v-icon left>mdi-upload</v-icon>
@@ -29,26 +31,43 @@
             return {
                 markingSchemefileSources: null,
                 markingSchemeTextSource: `
-Which process is responsible for the formation of gametes in humans? (1 mark)
-A) Mitosis
-B) Meiosis
-C) Binary fission
-D) Budding
-Answer: B) Meiosis
+1. Question (5 marks):
+Discuss the similarities and differences between the status of women in traditional
+Malay society and their roles after independence. Provide relevant examples.
+Answer:
+Similarities in the status of women in traditional Malay society and after
+independence include their roles as mothers and family supporters.
+Differences can be seen in various educational and employment opportunities
+that are now more open to women compared to traditional times.
 
-2) What is the primary function of mitochondria in a cell? (1 mark)
-A) Synthesizing proteins
-B) Producing energy (ATP)
-C) Storing genetic information
-D) Modifying and packaging proteins
-Answer: B) Producing energy (ATP)
+2. Question (5 marks): 
+What are the causes of World War II, and what significant effects did countries in the
+Southeast Asian region experience during and after the war?
+Answer:
+The main causes of World War II include political and economic tensions, as
+well as the hegemony of major powers. Effects in the Southeast Asian region
+include the destruction of infrastructure, a shortage of economic resources,
+and profound political changes such as the independence of some countries
+like Indonesia and Vietnam.
 
-3) Explain the process of photosynthesis and its significance in the plant kingdom. (4 marks)
-Suggested Answer: Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and oxygen. Chlorophyll in plant cells absorbs light energy, which is used to convert carbon dioxide and water into glucose, releasing oxygen as a byproduct. It's vital as it's the primary way plants produce food (glucose) and oxygen, which sustains life on Earth.
+3. Question (5 marks):
+Assess the effectiveness of Malaysia's economic policies such as the Malaysia
+Plans when evaluating the progress and constraints in the country's economic
+development.
+Answer:
+The Malaysia Plans have brought economic progress with investments in the
+industrial sector and infrastructure development. However, constraints such
+as issues of economic imbalance and negative environmental effects need
+attention to ensure sustainable development.
 
-4) Describe the mechanisms of genetic inheritance and the impact of genetic variations on species survival. (6 marks)
-Suggested Answer: Genetic inheritance involves the passing of traits from parents to offspring through DNA. It occurs through processes like meiosis and fertilization. Genetic variations, caused by mutations or recombination, contribute to biodiversity. These variations allow species to adapt to changing environments, aiding in survival by providing a wider range of traits that might be advantageous in different conditions. However, some variations can also lead to genetic disorders or reduced fitness in certain environments.
-                `,
+4. Question (5 marks):
+To what extent have Malay arts and culture contributed to the formation of
+Malaysia's identity? Provide concrete examples.
+Answer:
+Malay arts and culture, such as traditional dance, traditional music, and
+traditional attire, have been crucial elements in shaping Malaysia's identity.
+Examples include cultural diversity in food, traditional celebrations, and
+architectural heritage reflecting the country's rich history. `,
                 loadingGenerate: false,
                 rules: {
                     required: value => !!value || 'Required.',

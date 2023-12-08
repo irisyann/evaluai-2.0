@@ -48,9 +48,14 @@ export default {
                 value: '/generate-questions'
             },
             {
+                icon: 'mdi-note-text-outline',
+                title: 'Marking Scheme',
+                value: '/grade-papers'
+            },
+            {
                 icon: 'mdi-file-check',
                 title: 'Grade Papers',
-                value: '/grade-papers'
+                value: '/upload-student-answers'
             },
         ]
     }),

@@ -7,16 +7,12 @@
     />
 
     <v-card width="90%" class="mx-auto" flat style="background: transparent;">
-        <v-card-title class="text-center">Verify the processed marking scheme below and edit if necessary.</v-card-title>
-
         <v-card-text class="py-5">
-            <v-card flat color="accent" class="text-black mb-5">
-                <v-card-text>
-                    Total score: <span class="font-weight-bold">{{ this.totalScore }}</span>
-                </v-card-text>
-            </v-card>
+            <p class="pa-2 mb-2 font-weight-bold" style="background-color:  #48505B; border-radius: 5px;">
+                <v-icon start>mdi-numeric-2-circle</v-icon>
+                Step 2: Verify the processed marking scheme below and edit if necessary.</p>
 
-            <v-data-table :headers="headers" :items="markingScheme" class="mb-10">
+            <v-data-table :headers="headers" :items="markingScheme" class="mb-5">
                 <template v-slot:item.question_format="props" >
                     <v-chip variant="elevated" :color="questionFormatChipColor(props.item.question_format)">{{ props.item.question_format }}</v-chip>
                 </template>
@@ -52,6 +48,13 @@
                 <template v-slot:bottom>
                 </template>
             </v-data-table>
+
+            <v-card flat color="accent" class="text-black mb-10">
+                <v-card-text>
+                    Total score: <span class="font-weight-bold">{{ this.totalScore }}</span>
+                </v-card-text>
+            </v-card>
+
 
             <v-btn block class="py-8" color="secondary" to="/upload-student-answers">
                 Next

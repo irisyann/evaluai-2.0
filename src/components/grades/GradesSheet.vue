@@ -7,10 +7,10 @@
                         Name: <div class="font-weight-bold">{{ student.student_name }}</div>
                     </div>
                     <div class="mb-2">
-                        Total score: <div class="font-weight-bold">{{ student.score }}/{{ totalScore }}</div>
+                        Total score: <div class="font-weight-bold">{{ getTotalScore(student) }}/{{ totalScore }}</div>
                     </div>
                     <div class="mb-2">
-                        Percentage: <div class="font-weight-bold">{{ calculateScorePercentage(student.score) }}%</div>
+                        Percentage: <div class="font-weight-bold">{{ calculateScorePercentage(getTotalScore(student)) }}%</div>
                     </div>
                 </v-sheet>
                 <v-carousel hide-delimiter-background height="100%">
@@ -95,6 +95,16 @@ export default {
             // Round to 2 decimal places
             return Math.round((percentage + Number.EPSILON) * 100) / 100
         },
+
+        getTotalScore(student) {
+            let score = 0
+
+            for (let i = 0; i < student.questions.length; i++) {
+                score += student.questions[i].student_score
+            }
+
+            return score
+        }
     },
 }
 </script>
